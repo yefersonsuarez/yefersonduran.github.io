@@ -1,0 +1,137 @@
+:root {
+	--rojo: #080808;
+	--fondo: #c83c3c;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+    font-weight: normal;
+    color: #FFF; /* Cambiar el color del logotipo a blanco */
+    font-size: 40px;
+}
+
+header nav a {
+    color: #FFF; 
+    background-color: #080808; 
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+    padding: 10px 20px; 
+    border: 2px solid var(--rojo); 
+    border-radius: 5px; 
+    transition: border-color 0.3s ease; 
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #080808; 
+    background-color: #FFF;
+    border-color: #FFF; 
+}
+
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fdfbfb;
+	background: linear-gradient(rgba(178, 144, 144, 0.5) 0%, rgba(0,0,0,.50) 100%), url(../img/walli.jpg);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+}
+
+
+.pelicula-principal .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+    text-align: center; 
+}
+
+
+.pelicula-principal .titulo {
+    font-weight: 00;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: 00;
+    font-size: 2.0em;
+    margin-bottom: 0.4em;
+}
+
+
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 200%;
+	}
+}
+
+footer {
+    background-color: var(--fondo);
+    padding: 20px 0;
+}
+
+.barra-busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-busqueda input[type="text"] {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+}
+
+.barra-busqueda button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--rojo);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.barra-busqueda button:hover {
+    background-color: #d60000;
+}
